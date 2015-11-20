@@ -13,6 +13,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/signup.css">
     <!-- endbuild -->
   </head>
   <body ng-app="driveBuyApp">
@@ -32,7 +33,9 @@
               <img src="PATH_TO_JPEG" alt="">
           </div> -->
       </div>
-      <div class="overlay"></div>
+      <div class="overlay">
+        <div class="home-content" ng-view=""></div>
+      </div>
   </div>
 <!--     <div class="footer">
       <div class="container">
