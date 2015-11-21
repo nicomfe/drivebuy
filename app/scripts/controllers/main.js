@@ -19,6 +19,9 @@ angular.module('driveBuyApp')
                 $scope.name ='' ;
                 $scope.email= '' ;
                 $scope.showSuccess = true;
+                setTimeout(function() {
+                    $('.success-message').fadeOut('slow');
+                }, 4000);
             });
         }
     }
