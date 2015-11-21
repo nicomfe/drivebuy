@@ -1,5 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 body{
     overflow:hidden;
+}
+h1, h2{
+    max-width:700px;
+    text-align:center;
+    padding-top:0;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    margin-right:auto;
+    margin-left:auto;
+}
+h2{
+    font-size:16px;
+    font-weight:100;
+}
+.header{
+    width:100%;
 }
 .overlay{
     background-color: rgba(0,0,0,0.5);
