@@ -14,8 +14,10 @@ angular.module('driveBuyApp')
     $scope.submit = function(){
         $scope.showSuccess = true;
         if($scope.name !== undefined && $scope.email !== undefined){
-            registration.registerInterest({name: 'Nico', email: 'email@email.com'}).then(function(result){
+            registration.registerInterest({name: $scope.name, email: $scope.email}).then(function(result){
                 jQuery('.success-message').css('display','block');
+                $scope.name ='' ;
+                $scope.email= '' ;
                 $scope.showSuccess = true;
             });
         }
