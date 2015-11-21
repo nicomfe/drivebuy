@@ -1,0 +1,48 @@
+@import url(http://files.azizarslan.com/scicons.css);
+
+$social:
+  twitter #00acee "\e800",
+  facebook #3b5998 "\e801",
+  instagram #3f729b "\e802";
+
+div.social {
+  width : 100%;
+  text-align: center;
+  margin-top: 17px
+}
+
+div.social a {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border-radius: 5px;
+  font-family: "scicons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color .2s linear, color .2s linear;
+
+  &:before {
+    width: inherit;
+    height: inherit;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  @each $type in $social {
+    &.icon-#{nth($type, 1)} {
+      background-color: nth($type, 2);
+
+      &:before {
+        content: nth($type, 3);
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: nth($type, 2);
+      }
+    }
+  }
+}
